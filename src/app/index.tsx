@@ -11,18 +11,18 @@ import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
 
 function getDevMenuHint() {
   if (Platform.OS === 'web') {
-    return <ThemedText type="small">use browser devtools</ThemedText>;
+    return <ThemedText type="small">use browser games</ThemedText>;
   }
   if (Device.isDevice) {
     return (
       <ThemedText type="small">
-        shake device or press <ThemedText type="code">m</ThemedText> in terminal
+        shake your body or press me <ThemedText type="code">m</ThemedText> in terminal
       </ThemedText>
     );
   }
   const shortcut = Platform.OS === 'android' ? 'cmd+m (or ctrl+m)' : 'cmd+d';
   return (
-    <ThemedText type="small">
+    <ThemedText type="big">
       press <ThemedText type="code">{shortcut}</ThemedText>
     </ThemedText>
   );
@@ -35,22 +35,22 @@ export default function HomeScreen() {
         <ThemedView style={styles.heroSection}>
           <AnimatedIcon />
           <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
+            Welcome Matias Zuñiga to ExpoGo
           </ThemedText>
         </ThemedView>
 
         <ThemedText type="code" style={styles.code}>
-          get started
+          Tecnico Salesiano
         </ThemedText>
 
         <ThemedView type="backgroundElement" style={styles.stepContainer}>
           <HintRow
-            title="Try editing"
+            title="Try eat less"
             hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
           />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
+          <HintRow title="Devolver objetos robados" hint={getDevMenuHint()} />
           <HintRow
-            title="Fresh start"
+            title="Fresh Fish"
             hint={<ThemedText type="code">npm run reset-project</ThemedText>}
           />
         </ThemedView>
@@ -78,21 +78,22 @@ const styles = StyleSheet.create({
   heroSection: {
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1,
+    flex: 2,
     paddingHorizontal: Spacing.four,
     gap: Spacing.four,
   },
   title: {
     textAlign: 'center',
+    
   },
   code: {
-    textTransform: 'uppercase',
+    textTransform: 'lowercase',
   },
   stepContainer: {
     gap: Spacing.three,
     alignSelf: 'stretch',
     paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
+    paddingVertical: Spacing.seven,
     borderRadius: Spacing.four,
   },
 });
